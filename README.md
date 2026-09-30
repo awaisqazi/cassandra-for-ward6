@@ -25,12 +25,12 @@ npm run i18n:check # EN/ES parity audit
 | `/volunteer` | Key dates, petition drive, sign-up form, ways to help, donate |
 | `/links` | Linktree-style page for social bios |
 
-## Before launch: things marked `[TO CONFIRM]`
+## Before launch: open items
 
-Grep for `TO CONFIRM` in `src/` and `public/`. Currently:
+The live copy has no placeholders; these are the facts still to add.
 
-- **Photos of Cassandra.** Hero card and Meet page have dashed placeholders. Drop images into `public/images/` and swap the placeholder blocks.
-- **Biography.** Years in Ward 6, work, family, community involvement on `/meet`. Nothing is invented; the blanks are bracketed.
+- **Photos of Cassandra.** Hero card and Meet page show a "Photo coming soon" block. Drop images into `public/images/` and swap the placeholder blocks.
+- **Biography.** The `/meet` story cards are written around her stated values only. Add years in Ward 6, work, family, and community involvement once confirmed.
 - **Committee name** for "Paid for by" in the footer (`src/i18n/parts/shared.*.json`, `footer.paid_for`).
 - **Social handles.** Footer icons point to `#`. Set them in `src/components/Footer.astro` and the Navbar drawer.
 - **Volunteer form backend.** The form at `/volunteer#signup` opens a pre-filled email to `auroraforcassandra@gmail.com`. Replace with a Google Form or ActBlue form when one exists (see the TODO comment in `src/components/volunteer/SignupForm.astro`).
