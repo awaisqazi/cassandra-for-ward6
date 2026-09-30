@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import MeetHero from '../components/meet/MeetHero.astro';
+import WhyRunning from '../components/meet/WhyRunning.astro';
+import Story from '../components/meet/Story.astro';
+import Values from '../components/meet/Values.astro';
+import MeetCTA from '../components/meet/MeetCTA.astro';
+---
+
+<Layout
+  title="Meet Cassandra Echeverria | Cassandra for Ward 6"
+  description="Meet Cassandra Echeverria, a neighbor running for Alderperson of Ward 6 in Aurora, Illinois, because people should come before power."
+>
+  <Navbar />
+  <main id="main">
+    <MeetHero />
+    <WhyRunning />
+    <Story />
+    <Values />
+    <MeetCTA />
+  </main>
+  <Footer />
+</Layout>

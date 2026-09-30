@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PrioritiesHero from '../components/priorities/PrioritiesHero.astro';
+import Plank from '../components/priorities/Plank.astro';
+import HowIWork from '../components/priorities/HowIWork.astro';
+import PrioritiesCTA from '../components/priorities/PrioritiesCTA.astro';
+import enParts from '../i18n/parts/priorities.en.json';
+
+// English fallback text for each plank, read from the same dictionary the toggle uses.
+const t = enParts.priorities;
+const pick = (p) => ({
+  num: t[`${p}_num`], title: t[`${p}_title`], desc: t[`${p}_desc`], desc2: t[`${p}_desc2`], desc3: t[`${p}_desc3`],
+  item1: t[`${p}_item1`], item2: t[`${p}_item2`], item3: t[`${p}_item3`], item4: t[`${p}_item4`],
+});
+---
+
+<Layout
+  title="Priorities | Cassandra for Ward 6"
+  description="Cassandra Echeverria's three priorities for Ward 6 in Aurora, Illinois: community-centered public safety, dignity for neighbors in need, and investment in neighborhoods and youth."
+>
+  <Navbar />
+  <main id="main">
+    <PrioritiesHero />
+    <Plank id="p1" en={pick('p1')} tone="cream" />
+    <Plank id="p2" en={pick('p2')} tone="lilac" flip />
+    <Plank id="p3" en={pick('p3')} tone="cream" />
+    <HowIWork />
+    <PrioritiesCTA />
+  </main>
+  <Footer />
+</Layout>

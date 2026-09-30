@@ -1,0 +1,37 @@
+---
+const cards = [
+  { k: 'listen', icon: '01', title: 'Listen', text: 'Regular ward meetings, held where neighbors are, so your voice is heard before decisions are made.' },
+  { k: 'transparency', icon: '02', title: 'Be transparent', text: 'Every vote made public and explained, so you always know how I voted and why.' },
+  { k: 'access', icon: '03', title: 'Be accessible', text: 'Bilingual office hours in English and Spanish, so every neighbor can reach me.' },
+  { k: 'independence', icon: '04', title: 'Stay independent', text: 'Powered by everyday people, not corporations. I will answer to neighbors, not donors.' },
+];
+---
+
+<section class="how section-padding" id="how">
+  <div class="container">
+    <div class="head">
+      <span class="section-label animate-in" data-i18n="priorities.how_label">How I'll work</span>
+      <h2 class="section-title animate-in" data-i18n="priorities.how_title">A promise about how, not just what</h2>
+    </div>
+    <div class="grid">
+      {cards.map((c, i) => (
+        <article class="card animate-in" style={`--reveal-delay:${i * 0.08}s`}>
+          <span class="n">{c.icon}</span>
+          <h3 data-i18n={`priorities.how_${c.k}_title`}>{c.title}</h3>
+          <p data-i18n={`priorities.how_${c.k}_text`}>{c.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .how { background: var(--cream-dark); }
+  .head { margin-bottom: var(--space-2xl); }
+  .grid { display: grid; gap: var(--space-lg); grid-template-columns: 1fr; }
+  .n { font-family: var(--font-display); font-weight: 700; font-size: var(--text-xl); color: var(--pink-dark); }
+  h3 { font-size: var(--text-xl); margin: var(--space-sm) 0; }
+  .card p { color: var(--gray-700); font-size: var(--text-sm); }
+  @media (min-width: 640px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1000px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+</style>

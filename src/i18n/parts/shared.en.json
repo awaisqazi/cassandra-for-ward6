@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "meet": "Meet Cassandra",
+    "priorities": "Priorities",
+    "whynow": "Why Now",
+    "volunteer": "Get Involved",
+    "volunteer_cta": "Volunteer",
+    "donate": "Donate",
+    "tagline": "People before power."
+  },
+  "bar": {
+    "volunteer": "Join the team",
+    "donate": "Chip in"
+  },
+  "footer": {
+    "band_label": "Powered by neighbors, not corporations",
+    "band_text": "Every dollar helps us reach more Ward 6 neighbors.",
+    "motto": "People should come before power.",
+    "links_title": "Explore",
+    "dates_title": "Key dates",
+    "date_petitions": "Petition filing with the City Clerk",
+    "date_primary": "Primary election day",
+    "date_election": "General election",
+    "follow_title": "Follow",
+    "paid_for": "Paid for by Friends of Cassandra Echeverria [TO CONFIRM]",
+    "disclosure": "A copy of our report filed with the Illinois State Board of Elections is (or will be) available on the Board's official website (elections.il.gov) or for purchase from the State Board of Elections, Springfield, Illinois.",
+    "copyright": "© 2026 Cassandra for Ward 6. All rights reserved.",
+    "when_petitions": "Oct 19 - 26, 2026",
+    "when_primary": "Feb 23, 2027",
+    "when_election": "Apr 6, 2027"
+  }
+}

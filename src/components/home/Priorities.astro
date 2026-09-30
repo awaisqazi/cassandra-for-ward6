@@ -1,0 +1,44 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const planks = [
+  { key: 'p1', num: '01', title: 'Safer neighborhoods, with accountability', desc: 'Community-centered public safety that answers to residents. Safety and accountability are not opposites. Ward 6 deserves both.' },
+  { key: 'p2', num: '02', title: 'Dignity for every neighbor', desc: 'Our unhoused neighbors and struggling families are people, not problems to move out of sight. Practical solutions start with treating them that way.' },
+  { key: 'p3', num: '03', title: 'Invest in the people who make Aurora home', desc: 'Neighborhoods, youth, and the services that help families actually thrive. That is where the city budget should show up first.' },
+];
+---
+
+<section class="priorities section-padding" id="priorities">
+  <div class="container">
+    <div class="priorities-head">
+      <span class="section-label animate-in" data-i18n="home.pri_label">Three priorities</span>
+      <h2 class="section-title animate-in" style="--reveal-delay: 0.1s" data-i18n="home.pri_title">What it looks like in Ward 6</h2>
+    </div>
+
+    <ol class="plank-grid">
+      {planks.map((p, i) => (
+        <li class="plank card animate-in" style={`--reveal-delay: ${i * 0.1}s`}>
+          <span class="plank-num" aria-hidden="true">{p.num}</span>
+          <h3 class="plank-title" data-i18n={`home.${p.key}_title`}>{p.title}</h3>
+          <p class="plank-desc" data-i18n={`home.${p.key}_desc`}>{p.desc}</p>
+        </li>
+      ))}
+    </ol>
+
+    <div class="priorities-cta animate-in">
+      <a href={`${base}/priorities`} class="btn btn-outline" data-i18n="home.pri_cta">Read the full priorities</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .priorities { background: var(--cream); position: relative; }
+  .priorities::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--purple), var(--pink), var(--green)); }
+  .priorities-head { text-align: center; max-width: 720px; margin: 0 auto var(--space-2xl); }
+  .plank-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); }
+  .plank { position: relative; padding-top: var(--space-2xl); }
+  .plank-num { position: absolute; top: var(--space-md); right: var(--space-lg); font-family: var(--font-display); font-size: var(--text-3xl); color: var(--pink-light); font-weight: 900; line-height: 1; }
+  .plank-title { font-size: var(--text-xl); margin-bottom: var(--space-sm); color: var(--purple); }
+  .plank-desc { color: var(--gray-700); font-size: var(--text-sm); }
+  .priorities-cta { text-align: center; margin-top: var(--space-2xl); }
+  @media (max-width: 900px) { .plank-grid { grid-template-columns: 1fr; } }
+</style>

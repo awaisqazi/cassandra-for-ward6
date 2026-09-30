@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import WhyNowHero from '../components/whynow/WhyNowHero.astro';
+import ThenAndNow from '../components/whynow/ThenAndNow.astro';
+import WhatFreshMeans from '../components/whynow/WhatFreshMeans.astro';
+import PullQuote from '../components/whynow/PullQuote.astro';
+import WhyNowCTA from '../components/whynow/WhyNowCTA.astro';
+---
+<Layout
+  title="Why Now | Cassandra for Ward 6"
+  description="Ward 6 has had the same alderman since 1985. That is not an attack. It is a fact, and it is why the February 23, 2027 primary matters."
+>
+  <Navbar />
+  <main id="main">
+    <WhyNowHero />
+    <ThenAndNow />
+    <WhatFreshMeans />
+    <PullQuote />
+    <WhyNowCTA />
+  </main>
+  <Footer />
+</Layout>

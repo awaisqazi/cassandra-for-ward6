@@ -1,0 +1,45 @@
+---
+const cards = [
+  { k: 'roots', n: '01' },
+  { k: 'work', n: '02' },
+  { k: 'family', n: '03' },
+  { k: 'community', n: '04' },
+];
+const en = {
+  roots: ['Rooted in Aurora', 'Cassandra has lived in Ward 6 for [X] years. She chose to run here because this is where her neighbors are.', 'Years in Ward 6 [TO CONFIRM]'],
+  work: ['Her work', 'Cassandra works as [her job or profession], which has taught her [what she learned that shapes how she will serve].', 'Work and profession [TO CONFIRM]'],
+  family: ['Home and family', 'At home, Cassandra is [family details she is comfortable sharing], and that is why she cares about the schools, streets and services her neighbors depend on.', 'Family [TO CONFIRM]'],
+  community: ['Showing up for neighbors', 'Before this campaign, Cassandra showed up for Aurora through [community groups, volunteering or organizing she has done].', 'Community involvement [TO CONFIRM]'],
+};
+---
+
+<section class="story section-padding" id="story">
+  <div class="container">
+    <div class="head">
+      <span class="section-label animate-in" data-i18n="meet.story_label">Her story</span>
+      <h2 class="section-title animate-in" data-i18n="meet.story_title">The person behind the campaign</h2>
+      <p class="lead animate-in" data-i18n="meet.story_intro">We are still gathering the details of Cassandra's story, and we would rather show you a blank than get it wrong. Every bracketed note below will be replaced with the real thing.</p>
+    </div>
+    <div class="grid">
+      {cards.map((c, i) => (
+        <article class="card animate-in" style={`--reveal-delay:${i * 0.08}s`}>
+          <span class="num">{c.n}</span>
+          <h3 data-i18n={`meet.story_${c.k}_title`}>{en[c.k][0]}</h3>
+          <p data-i18n={`meet.story_${c.k}_text`}>{en[c.k][1]}</p>
+          <span class="placeholder-note" data-i18n={`meet.story_${c.k}_note`}>{en[c.k][2]}</span>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .story { background: var(--cream-dark); }
+  .head { max-width: 44rem; margin-bottom: var(--space-2xl); }
+  .grid { display: grid; gap: var(--space-lg); grid-template-columns: 1fr; }
+  .card { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-sm); }
+  .num { font-family: var(--font-display); font-size: var(--text-2xl); color: var(--pink-dark); font-weight: 700; }
+  h3 { font-size: var(--text-xl); }
+  .card p { color: var(--gray-700); margin-bottom: var(--space-sm); }
+  @media (min-width: 700px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+</style>

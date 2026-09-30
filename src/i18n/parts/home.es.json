@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "kicker": "Aurora, Illinois · Ward 6 · Primaria 23 de febrero de 2027",
+    "headline_1": "Las personas deben estar",
+    "headline_2": "antes que el poder.",
+    "sub": "Cassandra Echeverria es candidata a concejal del Ward 6 con una idea sencilla: vecindarios más seguros con rendición de cuentas, dignidad para cada vecino e inversión real en las personas que hacen de Aurora su hogar.",
+    "cta_volunteer": "Únase al equipo",
+    "cta_donate": "Aporte",
+    "people": "Impulsada por personas comunes y trabajadoras. No por corporaciones.",
+    "card_role": "Candidata a concejal del Ward 6",
+    "countdown": "días para la primaria"
+  },
+  "home": {
+    "promise_quote": "“Estoy haciendo campaña con una idea sencilla: las personas deben estar antes que el poder. Eso significa trabajar para lograr vecindarios más seguros mediante la rendición de cuentas y una seguridad pública centrada en la comunidad. Significa asegurarnos de que nuestros vecinos que no tienen vivienda y las familias que están pasando por dificultades no sean tratados como problemas que debemos esconder, sino como personas que merecen soluciones reales y dignidad. Significa invertir en nuestros vecindarios, en nuestros jóvenes y en los servicios que ayudan a que los residentes de Aurora puedan realmente salir adelante.”",
+    "promise_label": "La idea",
+    "promise_title": "Construir esperanza no es un lema. Es un plan.",
+    "promise_desc": "La esperanza se construye igual que un vecindario: una cuadra, una familia, una conversación a la vez. Cassandra se postula para que el Ayuntamiento escuche al Ward 6, y para traer energía e ideas nuevas a un puesto que no ha cambiado de manos desde 1985.",
+    "promise_desc2": "Esta campaña está impulsada por personas comunes y trabajadoras, no por corporaciones. Por vecinos que creen que el Ward 6 merece una opción real, y una representante que les rinda cuentas a ellos.",
+    "promise_cta": "Conozca a Cassandra",
+    "pri_label": "Tres prioridades",
+    "pri_title": "Así se ve en el Ward 6",
+    "p1_title": "Vecindarios más seguros, con rendición de cuentas",
+    "p1_desc": "Una seguridad pública centrada en la comunidad, que les rinda cuentas a los residentes. La seguridad y la rendición de cuentas no se contradicen. El Ward 6 merece las dos.",
+    "p2_title": "Dignidad para cada vecino",
+    "p2_desc": "Nuestros vecinos sin vivienda y las familias que pasan por dificultades son personas, no problemas que hay que esconder. Las soluciones reales empiezan por tratarlos así.",
+    "p3_title": "Invertir en las personas que hacen de Aurora su hogar",
+    "p3_desc": "Los vecindarios, los jóvenes y los servicios que ayudan a las familias a salir adelante. Ahí es donde el presupuesto de la ciudad debe notarse primero.",
+    "pri_cta": "Lea todas las prioridades",
+    "wn_stat": "La última vez que el Ward 6 tuvo un concejal nuevo",
+    "wn_label": "Por qué ahora",
+    "wn_title": "Cuarenta y un años son una carrera, no un mandato.",
+    "wn_desc": "El Ward 6 tiene al mismo concejal desde 1985. Fue nombrado ese año y lo han reelegido diez veces. Es una larga trayectoria de servicio. También es mucho tiempo sin una mirada fresca a lo que este distrito necesita, y el Ward 6 lleva una generación sin poder elegir de verdad. Eso cambia el 23 de febrero de 2027, cuando la primaria decide quién pasa a la elección general del 6 de abril.",
+    "wn_cta": "Por qué importa esta elección",
+    "join_label": "Participe",
+    "join_title": "La esperanza se construye entre todos. Échenos una mano.",
+    "join_desc": "Toque algunas puertas. Organice una reunión en su casa. Ponga un letrero en su jardín. Aporte lo que pueda. Cada esfuerzo llega a otro vecino del Ward 6.",
+    "join_cta": "Únase al equipo",
+    "join_donate": "Done en ActBlue",
+    "join_email": "¿Preguntas? Escriba a"
+  }
+}

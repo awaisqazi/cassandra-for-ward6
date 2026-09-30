@@ -1,0 +1,61 @@
+{
+  "whynow": {
+    "hero": {
+      "label": "Why now",
+      "title": "Ward 6 has had the same alderman since 1985.",
+      "sub": "That is not an attack. It is a fact, and it is why this race matters.",
+      "chip1_label": "First year in office",
+      "chip2_label": "Years in the seat",
+      "chip3_label": "Re-elections since the 1985 appointment",
+      "chip4_num": "Feb 23, 2027",
+      "chip4_label": "Primary election day"
+    },
+    "timeline": {
+      "label": "Then and now",
+      "title": "A lot can change in 41 years",
+      "intro": "Michael B. Saville has served Ward 6 since 1985, and we thank him for his service. The world around Ward 6 has changed a great deal since then. Here is a short look.",
+      "i1_title": "The seat is filled",
+      "i1_text": "In May 1985, the current alderman is appointed to represent Ward 6.",
+      "i2_title": "The Riverwalk Commission",
+      "i2_text": "The current alderman starts the Riverwalk Commission.",
+      "i3_title": "Phones and a recession",
+      "i3_text": "Smartphones become part of daily life, and the Great Recession reshapes family budgets across the country.",
+      "i4_title": "A pandemic",
+      "i4_text": "Schools, shops, and neighborhood gathering places close for a time, and neighbors lean on each other.",
+      "i5_title": "Ward 6 today",
+      "i5_text": "The challenges look different than they did in 1985. Ward 6 deserves someone ready to meet them with fresh eyes and new ideas.",
+      "i6_title": "Ward 6 chooses",
+      "i6_text": "The primary on February 23, 2027 is the first vote and narrows the field. The general election on April 6, 2027 decides who represents Ward 6 next."
+    },
+    "fresh": {
+      "label": "What fresh means",
+      "title": "New representation, in practice",
+      "intro": "Less about the past. More about what Cassandra will do.",
+      "old_label": "The same approach for 41 years",
+      "new_label": "What new representation brings",
+      "c1_old": "One familiar point of view at the table.",
+      "c1_title": "Listening",
+      "c1_new": "Cassandra will make listening the first job, with open neighborhood meetings and real answers to residents' questions.",
+      "c2_old": "The same approach, year after year.",
+      "c2_title": "New ideas",
+      "c2_new": "Cassandra brings practical, community-centered ideas for safer streets, dignity for unhoused neighbors, and investment in our youth.",
+      "c3_old": "A career, not a term.",
+      "c3_title": "Energy",
+      "c3_new": "Cassandra will knock on doors, show up at neighborhood events, and be present in every corner of Ward 6.",
+      "c4_old": "The same seat, election after election.",
+      "c4_title": "Accountability",
+      "c4_new": "Cassandra will report back regularly on what she is doing and why, and measure success by results for neighbors."
+    },
+    "quote": {
+      "label": "Our promise",
+      "text": "People should come before power.",
+      "cite": "Cassandra Echeverria, candidate for Ward 6 Alderperson"
+    },
+    "cta": {
+      "title": "Ward 6 deserves a choice",
+      "text": "Neighbors make change happen. Give an hour, share a story, or chip in, and help build hope in Ward 6.",
+      "volunteer": "Join the team",
+      "donate": "Donate"
+    }
+  }
+}

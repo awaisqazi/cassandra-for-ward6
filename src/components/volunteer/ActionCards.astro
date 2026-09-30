@@ -1,0 +1,41 @@
+---
+const DONATE = 'https://secure.actblue.com/donate/cassandrabuildinghope';
+const cards = [
+  { k: 'a1', title: 'Knock doors', text: 'Talk with neighbors on their porches. It is the heart of this campaign.' },
+  { k: 'a2', title: 'Phone and text', text: 'Reach Ward 6 voters from your couch, on your own time.' },
+  { k: 'a3', title: 'Host a house meeting', text: 'Invite friends and neighbors over. Cassandra will come and listen.' },
+  { k: 'a4', title: 'Take a yard sign', text: 'Show your block that Ward 6 has a choice.' },
+  { k: 'a5', title: 'Translate', text: 'Help us reach Spanish-speaking neighbors in their own language.' },
+  { k: 'a6', title: 'Donate', text: 'Every gift helps us reach more Ward 6 residents.', donate: true },
+];
+---
+<section class="section-padding ac">
+  <div class="container">
+    <span class="section-label animate-in" data-i18n="volunteer.actions.label">Ways to help</span>
+    <h2 class="section-title animate-in" data-i18n="volunteer.actions.title">Six ways to build hope</h2>
+    <div class="ac-grid">
+      {cards.map((c, i) => (
+        <article class="card ac-card animate-in" style={`--reveal-delay:${(i % 3) * 0.08}s`}>
+          <span class="ac-num stat-tabular" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+          <h3 data-i18n={`volunteer.actions.${c.k}_title`}>{c.title}</h3>
+          <p data-i18n={`volunteer.actions.${c.k}_text`}>{c.text}</p>
+          {c.donate
+            ? <a href={DONATE} class="btn btn-pink ac-btn" target="_blank" rel="noopener" data-i18n="volunteer.actions.btn_donate">Donate</a>
+            : <a href="#signup" class="btn btn-outline ac-btn" data-i18n="volunteer.actions.btn">Sign me up</a>}
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .ac { background: var(--cream); }
+  .ac-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); }
+  .ac-card { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-sm); }
+  .ac-num { font-family: var(--font-display); font-weight: 700; font-size: var(--text-3xl); color: var(--pink); line-height: 1; }
+  .ac-card h3 { font-size: var(--text-xl); color: var(--purple); }
+  .ac-card p { color: var(--gray-700); font-size: var(--text-sm); flex: 1; }
+  .ac-btn { margin-top: var(--space-sm); padding: 0.6rem 1.4rem; font-size: var(--text-sm); }
+  @media (min-width: 640px) { .ac-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 960px) { .ac-grid { grid-template-columns: repeat(3, 1fr); } }
+</style>

@@ -1,0 +1,22 @@
+---
+// Sticky bottom bar on phones: the standing asks. Hidden on /links.
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<div class="action-bar hide-desktop" id="action-bar">
+  <a href={`${base}/volunteer#signup`} class="bar-btn bar-volunteer" data-i18n="bar.volunteer">Join the team</a>
+  <a href="https://secure.actblue.com/donate/cassandrabuildinghope" class="bar-btn bar-donate" target="_blank" rel="noopener" data-i18n="bar.donate">Chip in</a>
+</div>
+
+<style>
+  .action-bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 9990;
+    display: flex; gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(251, 245, 238, 0.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(120, 40, 136, 0.1);
+  }
+  .bar-btn { flex: 1; text-align: center; font-weight: 700; font-size: var(--text-sm); padding: 12px 10px; border-radius: 999px; }
+  .bar-volunteer { background: var(--purple); color: var(--white); }
+  .bar-donate { background: var(--pink); color: var(--white); }
+  @media (max-width: 1024px) { body { padding-bottom: 72px; } }
+</style>

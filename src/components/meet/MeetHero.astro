@@ -1,0 +1,55 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<section class="meet-hero" id="meet-hero">
+  <img class="orn" src={`${base}/flower.png`} alt="" aria-hidden="true" />
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="section-label animate-in" data-i18n="meet.hero_label">Meet Cassandra</span>
+      <h1 class="animate-in" data-i18n="meet.hero_headline">A neighbor running because people should come before power.</h1>
+      <p class="animate-in" data-i18n="meet.hero_sub">Cassandra Echeverria is running for Alderperson of Ward 6 in Aurora, Illinois. Not to build a career, but to build hope, one block and one conversation at a time.</p>
+    </div>
+    <div class="photo-ph animate-in" role="img" aria-label="Photo of Cassandra, coming soon">
+      <img src={`${base}/flower.png`} alt="" aria-hidden="true" />
+      <span class="ph-alt" data-i18n="meet.hero_photo_alt">Photo coming soon</span>
+      <span class="placeholder-note" data-i18n="meet.hero_photo_note">Photo of Cassandra [TO CONFIRM]</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .meet-hero {
+    position: relative;
+    overflow: hidden;
+    padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-3xl);
+    background:
+      radial-gradient(ellipse at 85% 10%, rgba(96, 0, 176, 0.55), transparent 60%),
+      radial-gradient(ellipse at 0% 100%, rgba(248, 96, 176, 0.14), transparent 55%),
+      var(--purple-deep);
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .orn {
+    position: absolute; right: -90px; bottom: -110px; width: 420px; max-width: 80vw;
+    opacity: 0.08; pointer-events: none;
+  }
+  .hero-grid { position: relative; display: grid; gap: var(--space-2xl); align-items: center; }
+  .hero-copy { display: flex; flex-direction: column; gap: var(--space-md); }
+  .meet-hero .section-label { color: var(--pink); margin-bottom: 0; }
+  h1 {
+    font-size: var(--text-4xl); color: var(--white); line-height: 1.06; letter-spacing: -0.01em;
+  }
+  .hero-copy p { font-size: var(--text-lg); max-width: 34rem; }
+  .photo-ph {
+    min-height: 320px; border: 2px dashed rgba(255, 255, 255, 0.4); border-radius: var(--radius-xl);
+    background: rgba(255, 255, 255, 0.06);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: var(--space-md); padding: var(--space-xl); text-align: center;
+  }
+  .photo-ph img { width: 64px; opacity: 0.75; }
+  .ph-alt { font-family: var(--font-display); font-size: var(--text-xl); color: var(--white); }
+  @media (min-width: 900px) {
+    .hero-grid { grid-template-columns: 1.25fr 1fr; gap: var(--space-3xl); }
+    .photo-ph { min-height: 440px; }
+  }
+</style>

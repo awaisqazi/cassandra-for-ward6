@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/home/Hero.astro';
+import Promise from '../components/home/Promise.astro';
+import Priorities from '../components/home/Priorities.astro';
+import WhyNowTeaser from '../components/home/WhyNowTeaser.astro';
+import JoinBand from '../components/home/JoinBand.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Building Hope | Cassandra for Ward 6"
+  description="Cassandra Echeverria is running for Alderperson of Ward 6 in Aurora, Illinois, on a simple idea: people should come before power. The primary is February 23, 2027."
+>
+  <Navbar />
+  <main id="main">
+    <Hero />
+    <Promise />
+    <Priorities />
+    <WhyNowTeaser />
+    <JoinBand />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,61 @@
+{
+  "whynow": {
+    "hero": {
+      "label": "Por qué ahora",
+      "title": "El Ward 6 tiene al mismo concejal desde 1985.",
+      "sub": "Esto no es un ataque. Es un hecho, y por eso esta elección importa.",
+      "chip1_label": "Primer año en el cargo",
+      "chip2_label": "Años en el puesto",
+      "chip3_label": "Reelecciones desde su nombramiento en 1985",
+      "chip4_num": "23 de feb. de 2027",
+      "chip4_label": "Día de la elección primaria"
+    },
+    "timeline": {
+      "label": "Antes y ahora",
+      "title": "En 41 años pueden cambiar muchas cosas",
+      "intro": "Michael B. Saville ha servido al Ward 6 desde 1985, y le agradecemos su servicio. Desde entonces, el mundo alrededor del Ward 6 ha cambiado muchísimo. Aquí tiene un breve repaso.",
+      "i1_title": "Se ocupa el cargo",
+      "i1_text": "En mayo de 1985, el concejal actual es nombrado para representar al Ward 6.",
+      "i2_title": "La Comisión del Riverwalk",
+      "i2_text": "El concejal actual pone en marcha la Comisión del Riverwalk.",
+      "i3_title": "Celulares y una recesión",
+      "i3_text": "Los teléfonos inteligentes entran en la vida diaria, y la Gran Recesión sacude el presupuesto de las familias en todo el país.",
+      "i4_title": "Una pandemia",
+      "i4_text": "Escuelas, comercios y lugares de encuentro del vecindario cierran por un tiempo, y los vecinos se apoyan unos en otros.",
+      "i5_title": "El Ward 6 hoy",
+      "i5_text": "Los retos ya no son los de 1985. El Ward 6 merece a alguien listo para enfrentarlos con una mirada fresca e ideas nuevas.",
+      "i6_title": "El Ward 6 decide",
+      "i6_text": "La primaria del 23 de febrero de 2027 es la primera votación y define quiénes siguen en la contienda. La elección general del 6 de abril de 2027 decide quién representará al Ward 6."
+    },
+    "fresh": {
+      "label": "Aire nuevo",
+      "title": "Una nueva representación, en la práctica",
+      "intro": "Menos sobre el pasado. Más sobre lo que Cassandra hará.",
+      "old_label": "El mismo enfoque durante 41 años",
+      "new_label": "Lo que trae una nueva representación",
+      "c1_old": "El mismo punto de vista de siempre en la mesa.",
+      "c1_title": "Escuchar",
+      "c1_new": "Cassandra hará de escuchar su primer trabajo, con reuniones abiertas en los vecindarios y respuestas de verdad a las preguntas de los residentes.",
+      "c2_old": "El mismo enfoque, año tras año.",
+      "c2_title": "Ideas nuevas",
+      "c2_new": "Cassandra propone ideas prácticas y centradas en la comunidad: calles más seguras, dignidad para los vecinos sin vivienda e inversión en nuestros jóvenes.",
+      "c3_old": "Una carrera, no un mandato.",
+      "c3_title": "Energía",
+      "c3_new": "Cassandra tocará puertas, estará presente en los eventos del vecindario y visitará cada rincón del Ward 6.",
+      "c4_old": "El mismo puesto, elección tras elección.",
+      "c4_title": "Rendición de cuentas",
+      "c4_new": "Cassandra le informará con regularidad lo que hace y por qué, y medirá el éxito por los resultados para los vecinos."
+    },
+    "quote": {
+      "label": "Nuestra promesa",
+      "text": "Las personas deben estar antes que el poder.",
+      "cite": "Cassandra Echeverria, candidata a concejal del Ward 6"
+    },
+    "cta": {
+      "title": "El Ward 6 merece poder elegir",
+      "text": "El cambio lo hacen los vecinos. Regálenos una hora, cuéntenos su historia o haga un aporte, y ayúdenos a construir esperanza en el Ward 6.",
+      "volunteer": "Únase al equipo",
+      "donate": "Done"
+    }
+  }
+}

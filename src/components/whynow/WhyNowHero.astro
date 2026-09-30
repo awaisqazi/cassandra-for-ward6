@@ -1,0 +1,33 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<section class="wn-hero">
+  <img src={`${base}/flower.png`} alt="" aria-hidden="true" class="wn-flower" />
+  <div class="container wn-inner">
+    <span class="section-label animate-in" data-i18n="whynow.hero.label">Why now</span>
+    <h1 class="wn-title animate-in" style="--reveal-delay:0.08s" data-i18n="whynow.hero.title">Ward 6 has had the same alderman since 1985.</h1>
+    <p class="wn-sub animate-in" style="--reveal-delay:0.16s" data-i18n="whynow.hero.sub">That is not an attack. It is a fact, and it is why this race matters.</p>
+    <ul class="wn-chips">
+      <li class="chip animate-in" style="--reveal-delay:0.24s"><span class="chip-num stat-tabular">1985</span><span class="chip-label" data-i18n="whynow.hero.chip1_label">First year in office</span></li>
+      <li class="chip animate-in" style="--reveal-delay:0.3s"><span class="chip-num stat-tabular">41</span><span class="chip-label" data-i18n="whynow.hero.chip2_label">Years in the seat</span></li>
+      <li class="chip animate-in" style="--reveal-delay:0.36s"><span class="chip-num stat-tabular">10</span><span class="chip-label" data-i18n="whynow.hero.chip3_label">Re-elections since the 1985 appointment</span></li>
+      <li class="chip chip-key animate-in" style="--reveal-delay:0.42s"><span class="chip-num stat-tabular" data-i18n="whynow.hero.chip4_num">Feb 23, 2027</span><span class="chip-label" data-i18n="whynow.hero.chip4_label">Primary election day</span></li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .wn-hero { position: relative; overflow: hidden; padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-3xl); background: linear-gradient(160deg, var(--cream) 0%, var(--lilac) 100%); }
+  .wn-flower { position: absolute; right: -60px; top: calc(var(--nav-height) + 20px); width: 260px; opacity: 0.18; pointer-events: none; }
+  .wn-inner { position: relative; }
+  .wn-title { font-size: var(--text-5xl); max-width: 16ch; letter-spacing: -0.02em; margin-bottom: var(--space-lg); }
+  .wn-sub { font-size: var(--text-xl); color: var(--gray-700); max-width: 34ch; margin-bottom: var(--space-2xl); }
+  .wn-chips { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); max-width: 820px; }
+  .chip { background: var(--white); border-radius: var(--radius-lg); padding: var(--space-md) var(--space-lg); box-shadow: var(--shadow-sm); border: 1px solid rgba(120,40,136,0.08); display: flex; flex-direction: column; gap: 2px; }
+  .chip-num { font-family: var(--font-display); font-weight: 700; font-size: var(--text-3xl); color: var(--purple); line-height: 1.1; }
+  .chip-label { font-size: var(--text-xs); font-weight: 600; color: var(--gray-500); letter-spacing: 0.04em; }
+  .chip-key { background: var(--purple); }
+  .chip-key .chip-num { color: var(--white); font-size: var(--text-2xl); }
+  .chip-key .chip-label { color: var(--pink-light); }
+  @media (min-width: 900px) { .wn-chips { grid-template-columns: repeat(4, 1fr); max-width: none; } .wn-flower { width: 380px; right: 2%; } }
+</style>

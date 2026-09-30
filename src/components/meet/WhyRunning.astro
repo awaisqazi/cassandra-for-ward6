@@ -1,0 +1,35 @@
+<section class="why section-padding" id="why-running">
+  <div class="container why-grid">
+    <div class="why-head">
+      <span class="section-label animate-in" data-i18n="meet.why_label">Why she is running</span>
+      <h2 class="section-title animate-in" data-i18n="meet.why_title">A simple idea. A lot of work ahead.</h2>
+      <p class="animate-in" data-i18n="meet.why_desc">Cassandra puts it plainly. Safer neighborhoods come from accountability and public safety that is centered on the community. Neighbors without housing, and families who are struggling, should get practical solutions and dignity, not a push out of sight.</p>
+      <p class="animate-in" data-i18n="meet.why_desc2">She is asking Ward 6 for a chance to represent the people who live here, and she wants to earn that trust by listening first.</p>
+    </div>
+    <figure class="quote-card animate-in">
+      <blockquote class="pull" data-i18n="meet.why_pull">“I'm running on a simple idea: People should come before power.”</blockquote>
+      <blockquote class="q" data-i18n="meet.why_quote">“It means investing in our neighborhoods, our youth, and the services that help Aurora residents actually thrive.”</blockquote>
+      <blockquote class="q" data-i18n="meet.why_quote2">“This campaign is powered by everyday people, like yourself, and NOT corporations.”</blockquote>
+      <figcaption data-i18n="meet.why_cite">Cassandra, in her own words</figcaption>
+    </figure>
+  </div>
+</section>
+
+<style>
+  .why { background: var(--cream); }
+  .why-grid { display: grid; gap: var(--space-2xl); align-items: start; }
+  .why-head p { color: var(--gray-700); margin-bottom: var(--space-md); }
+  .quote-card {
+    background: var(--lilac); border-radius: var(--radius-xl); padding: var(--space-xl);
+    border-left: 6px solid var(--pink); display: flex; flex-direction: column; gap: var(--space-lg);
+  }
+  .pull { font-family: var(--font-display); font-size: var(--text-2xl); line-height: 1.2; color: var(--purple); font-weight: 700; }
+  .q { font-size: var(--text-base); font-style: italic; color: var(--gray-700); }
+  figcaption {
+    font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--green);
+  }
+  @media (min-width: 900px) {
+    .why-grid { grid-template-columns: 1fr 1fr; gap: var(--space-3xl); }
+    .quote-card { padding: var(--space-2xl); }
+  }
+</style>

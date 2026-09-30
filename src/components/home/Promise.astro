@@ -1,0 +1,37 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<section class="promise section-padding" id="promise">
+  <div class="container">
+    <div class="promise-grid">
+      <div class="promise-quote animate-in">
+        <img src={`${base}/flower.png`} alt="" class="promise-flower" aria-hidden="true" />
+        <blockquote>
+          <p class="quote-text" data-i18n="home.promise_quote">“I'm running on a simple idea: People should come before power. That means working toward safer neighborhoods through accountability and community-centered public safety. It means making sure our unhoused neighbors and struggling families are not treated as problems to move out of sight, but as people who deserve practical solutions and dignity. It means investing in our neighborhoods, our youth, and the services that help Aurora residents actually thrive.”</p>
+          <cite class="quote-cite">Cassandra Echeverria</cite>
+        </blockquote>
+      </div>
+
+      <div class="promise-copy">
+        <span class="section-label animate-in" data-i18n="home.promise_label">The idea</span>
+        <h2 class="section-title animate-in" style="--reveal-delay: 0.1s" data-i18n="home.promise_title">Building hope is not a slogan. It is a plan.</h2>
+        <p class="animate-in" style="--reveal-delay: 0.15s" data-i18n="home.promise_desc">Hope gets built the same way a neighborhood does: one block, one family, one conversation at a time. Cassandra is running to make sure City Hall hears Ward 6, and to bring fresh energy and new ideas to a seat that has not changed hands since 1985.</p>
+        <p class="animate-in" style="--reveal-delay: 0.2s" data-i18n="home.promise_desc2">This campaign is powered by everyday people, not corporations. Neighbors who believe Ward 6 deserves a real choice, and a representative who answers to them.</p>
+        <a href={`${base}/meet`} class="btn btn-purple animate-in" style="--reveal-delay: 0.25s" data-i18n="home.promise_cta">Meet Cassandra</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .promise { background: var(--white); position: relative; }
+  .promise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: center; }
+  .promise-quote { position: relative; background: var(--lilac); border-radius: var(--radius-xl); padding: var(--space-2xl); border-left: 6px solid var(--pink); }
+  .promise-flower { position: absolute; top: -26px; right: 24px; width: 72px; }
+  .quote-text { font-family: var(--font-display); font-size: var(--text-xl); line-height: 1.4; color: var(--purple-deep); }
+  .quote-cite { display: block; margin-top: var(--space-md); font-style: normal; font-weight: 700; color: var(--green); letter-spacing: 0.08em; text-transform: uppercase; font-size: var(--text-xs); }
+  .promise-copy p { color: var(--gray-700); margin-bottom: var(--space-md); }
+  .promise-copy .btn { margin-top: var(--space-sm); }
+  @media (max-width: 900px) { .promise-grid { grid-template-columns: 1fr; gap: var(--space-2xl); } }
+</style>

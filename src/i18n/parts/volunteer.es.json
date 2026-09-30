@@ -1,0 +1,88 @@
+{
+  "volunteer": {
+    "hero": {
+      "label": "Participe",
+      "title": "Ayude a construir esperanza en el Ward 6",
+      "sub": "Esta campaña es de vecinos hablando con vecinos. Hay un lugar para usted, tenga una hora o diez.",
+      "cta": "Únase al equipo",
+      "cta2": "Ver fechas clave"
+    },
+    "dates": {
+      "label": "Fechas clave",
+      "title": "Marque su calendario",
+      "d1_when": "19 al 26 de oct. de 2026",
+      "d1_title": "Entrega de peticiones",
+      "d1_text": "Los candidatos entregan sus peticiones en la Secretaría Municipal (City Clerk) de Aurora, de 8 a. m. a 5 p. m.",
+      "d2_when": "23 de feb. de 2027",
+      "d2_title": "Día de la elección primaria",
+      "d2_text": "La primera votación, y la que más importa. La primaria define quiénes siguen en la contienda y quién pasa a abril.",
+      "d3_when": "6 de abr. de 2027",
+      "d3_title": "Elección general",
+      "d3_text": "La elección general consolidada. El Ward 6 toma su decisión final.",
+      "count_label": "días para la primaria"
+    },
+    "petition": {
+      "label": "La campaña de firmas",
+      "title": "Aparecer en la boleta empieza con los vecinos",
+      "p1": "Para aparecer en la boleta, Cassandra necesita firmas de votantes registrados del Ward 6. Las reunimos ahora y las entregamos en la Secretaría Municipal durante el período de entrega, del 19 al 26 de octubre de 2026.",
+      "p2": "Firmar toma un minuto. Llevar una tablilla toma unas horas, y es una de las mejores maneras de conocer a sus vecinos.",
+      "s1_title": "Firme la petición",
+      "s1_text": "Si usted es votante registrado del Ward 6, agregue su nombre.",
+      "s2_title": "Lleve una petición",
+      "s2_text": "Reúna firmas en su cuadra, en una reunión o en la puerta de su casa.",
+      "s3_title": "Cuéntele a un vecino",
+      "s3_text": "Comparta la campaña con un amigo del Ward 6 esta semana.",
+      "note1": "[POR CONFIRMAR] Cantidad exacta de firmas requeridas",
+      "note2": "[POR CONFIRMAR] Calendario y lugares de la campaña de firmas"
+    },
+    "form": {
+      "label": "Inscríbase",
+      "title": "Únase al equipo",
+      "intro": "Cuéntenos un poco sobre usted y cómo le gustaría ayudar. Una persona de verdad le responderá.",
+      "name_label": "Nombre completo",
+      "name_ph": "Su nombre",
+      "email_label": "Correo electrónico",
+      "email_ph": "usted@ejemplo.com",
+      "phone_label": "Teléfono (opcional)",
+      "phone_ph": "(630) 555-0123",
+      "zip_label": "Código postal",
+      "zip_ph": "60505",
+      "help_legend": "Puedo ayudar",
+      "opt_doors": "Tocando puertas",
+      "opt_phone": "Llamando o enviando mensajes de texto",
+      "opt_meeting": "Organizando una reunión en mi casa",
+      "opt_sign": "Colocando un letrero en mi jardín",
+      "opt_petition": "Firmando o llevando la petición",
+      "opt_translate": "Traduciendo o ayudando a llegar a vecinos hispanohablantes",
+      "submit": "Enviar mi registro",
+      "note": "Se abrirá su aplicación de correo con sus datos listos para enviar.",
+      "error": "Por favor, escriba su nombre y su correo para que podamos comunicarnos con usted.",
+      "thanks_title": "¡Gracias!",
+      "thanks_text": "Por favor, revise su aplicación de correo. Su registro ya está listo: solo presione enviar y pronto nos comunicaremos con usted."
+    },
+    "actions": {
+      "label": "Maneras de ayudar",
+      "title": "Seis maneras de construir esperanza",
+      "a1_title": "Toque puertas",
+      "a1_text": "Converse con los vecinos en la puerta de su casa. Es el corazón de esta campaña.",
+      "a2_title": "Llame y envíe mensajes",
+      "a2_text": "Comuníquese con votantes del Ward 6 desde su sofá, a la hora que le convenga.",
+      "a3_title": "Organice una reunión en su casa",
+      "a3_text": "Invite a amigos y vecinos. Cassandra irá a escucharlos.",
+      "a4_title": "Ponga un letrero",
+      "a4_text": "Muéstrele a su cuadra que en el Ward 6 sí hay opción.",
+      "a5_title": "Traduzca",
+      "a5_text": "Ayúdenos a llegar a los vecinos hispanohablantes en su propio idioma.",
+      "a6_title": "Done",
+      "a6_text": "Cada aporte nos ayuda a llegar a más residentes del Ward 6.",
+      "btn": "Quiero ayudar",
+      "btn_donate": "Done"
+    },
+    "fund": {
+      "label": "Impulsada por vecinos",
+      "title": "Aporte para construir esperanza",
+      "text": "Esta campaña está impulsada por personas comunes y trabajadoras, como usted, y NO por corporaciones.",
+      "btn": "Done"
+    }
+  }
+}

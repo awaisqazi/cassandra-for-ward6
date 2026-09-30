@@ -1,0 +1,45 @@
+---
+const steps = [
+  { k: 's1', title: 'Sign the petition', text: 'If you are a registered Ward 6 voter, add your name.' },
+  { k: 's2', title: 'Carry a petition', text: 'Collect signatures on your block, at a gathering, or at your door.' },
+  { k: 's3', title: 'Tell a neighbor', text: 'Share the campaign with one friend in Ward 6 this week.' },
+];
+---
+<section class="section-padding pd">
+  <div class="container pd-grid">
+    <div class="pd-copy">
+      <span class="section-label animate-in" data-i18n="volunteer.petition.label">The petition drive</span>
+      <h2 class="section-title animate-in" data-i18n="volunteer.petition.title">Getting on the ballot starts with neighbors</h2>
+      <p class="lead animate-in" data-i18n="volunteer.petition.p1">To get on the ballot, Cassandra needs signatures from registered Ward 6 voters. We gather them now and file them with the City Clerk during the filing window, October 19 to 26, 2026.</p>
+      <p class="pd-p2 animate-in" data-i18n="volunteer.petition.p2">Signing takes a minute. Carrying a clipboard takes a few hours, and it is one of the best ways to meet your neighbors.</p>
+      <p class="pd-notes animate-in">
+        <span class="placeholder-note" data-i18n="volunteer.petition.note1">[TO CONFIRM] Exact number of signatures required</span>
+        <span class="placeholder-note" data-i18n="volunteer.petition.note2">[TO CONFIRM] Petition drive schedule and locations</span>
+      </p>
+    </div>
+    <ol class="pd-steps">
+      {steps.map((s, i) => (
+        <li class="pd-step animate-in" style={`--reveal-delay:${i * 0.08}s`}>
+          <span class="pd-num stat-tabular" aria-hidden="true">{i + 1}</span>
+          <div>
+            <h3 data-i18n={`volunteer.petition.${s.k}_title`}>{s.title}</h3>
+            <p data-i18n={`volunteer.petition.${s.k}_text`}>{s.text}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<style>
+  .pd { background: var(--cream-dark); }
+  .pd-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-2xl); align-items: start; }
+  .pd-p2 { color: var(--gray-700); margin-top: var(--space-md); }
+  .pd-notes { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-sm); margin-top: var(--space-lg); }
+  .pd-steps { display: flex; flex-direction: column; gap: var(--space-md); }
+  .pd-step { display: flex; gap: var(--space-md); background: var(--white); border-radius: var(--radius-lg); padding: var(--space-lg); box-shadow: var(--shadow-sm); }
+  .pd-num { flex: none; width: 44px; height: 44px; border-radius: 50%; background: var(--green); color: var(--white); font-weight: 700; display: grid; place-items: center; font-size: var(--text-lg); }
+  .pd-step h3 { font-size: var(--text-xl); color: var(--black); margin-bottom: 2px; }
+  .pd-step p { color: var(--gray-700); font-size: var(--text-sm); }
+  @media (min-width: 900px) { .pd-grid { grid-template-columns: 1.1fr 1fr; gap: var(--space-3xl); } }
+</style>

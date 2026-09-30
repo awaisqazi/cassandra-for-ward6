@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "kicker": "Aurora, Illinois · Ward 6 · Primary February 23, 2027",
+    "headline_1": "People should come",
+    "headline_2": "before power.",
+    "sub": "Cassandra Echeverria is running for Alderperson of Ward 6 with a simple idea: safer neighborhoods through accountability, dignity for every neighbor, and real investment in the people who make Aurora home.",
+    "cta_volunteer": "Join the team",
+    "cta_donate": "Chip in",
+    "people": "Powered by everyday people. Not corporations.",
+    "card_role": "Candidate for Ward 6 Alderperson",
+    "countdown": "days until the primary"
+  },
+  "home": {
+    "promise_quote": "“I'm running on a simple idea: People should come before power. That means working toward safer neighborhoods through accountability and community-centered public safety. It means making sure our unhoused neighbors and struggling families are not treated as problems to move out of sight, but as people who deserve practical solutions and dignity. It means investing in our neighborhoods, our youth, and the services that help Aurora residents actually thrive.”",
+    "promise_label": "The idea",
+    "promise_title": "Building hope is not a slogan. It is a plan.",
+    "promise_desc": "Hope gets built the same way a neighborhood does: one block, one family, one conversation at a time. Cassandra is running to make sure City Hall hears Ward 6, and to bring fresh energy and new ideas to a seat that has not changed hands since 1985.",
+    "promise_desc2": "This campaign is powered by everyday people, not corporations. Neighbors who believe Ward 6 deserves a real choice, and a representative who answers to them.",
+    "promise_cta": "Meet Cassandra",
+    "pri_label": "Three priorities",
+    "pri_title": "What it looks like in Ward 6",
+    "p1_title": "Safer neighborhoods, with accountability",
+    "p1_desc": "Community-centered public safety that answers to residents. Safety and accountability are not opposites. Ward 6 deserves both.",
+    "p2_title": "Dignity for every neighbor",
+    "p2_desc": "Our unhoused neighbors and struggling families are people, not problems to move out of sight. Practical solutions start with treating them that way.",
+    "p3_title": "Invest in the people who make Aurora home",
+    "p3_desc": "Neighborhoods, youth, and the services that help families actually thrive. That is where the city budget should show up first.",
+    "pri_cta": "Read the full priorities",
+    "wn_stat": "The last time Ward 6 got a new alderperson",
+    "wn_label": "Why now",
+    "wn_title": "Forty-one years is a career, not a term.",
+    "wn_desc": "Ward 6 has had the same alderman since 1985. He was appointed that year and has been re-elected ten times. That is a long record of service. It is also a long time without a fresh look at what this ward needs, and Ward 6 has not had a real choice in a generation. That changes on February 23, 2027, when the primary decides who goes on to the April 6 general election.",
+    "wn_cta": "Why this race matters",
+    "join_label": "Get involved",
+    "join_title": "Hope gets built by hand. Bring yours.",
+    "join_desc": "Knock a few doors. Host a house meeting. Put a sign in the yard. Chip in what you can. Every bit of it reaches another Ward 6 neighbor.",
+    "join_cta": "Join the team",
+    "join_donate": "Donate on ActBlue",
+    "join_email": "Questions? Write to"
+  }
+}

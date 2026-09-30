@@ -1,0 +1,57 @@
+---
+// One plank section. Keys are passed as a prefix (e.g. "p1") so every string stays namespaced under priorities.*
+const { id, en, flip = false, tone = 'cream' } = Astro.props;
+const items = [1, 2, 3, 4];
+---
+
+<section class={`plank section-padding tone-${tone}`} id={`plank-${id}`}>
+  <div class:list={['container', 'grid', { flip }]}>
+    <div class="text">
+      <span class="num animate-in" data-i18n={`priorities.${id}_num`}>{en.num}</span>
+      <h2 class="section-title animate-in" data-i18n={`priorities.${id}_title`}>{en.title}</h2>
+      <p class="animate-in" data-i18n={`priorities.${id}_desc`}>{en.desc}</p>
+      <p class="animate-in" data-i18n={`priorities.${id}_desc2`}>{en.desc2}</p>
+      <p class="animate-in" data-i18n={`priorities.${id}_desc3`}>{en.desc3}</p>
+    </div>
+    <aside class="commit animate-in">
+      <h3 data-i18n={`priorities.${id}_list_title`}>What Cassandra will do</h3>
+      <ul>
+        {items.map((n) => (
+          <li>
+            <span class="tick" aria-hidden="true">&#10003;</span>
+            <span data-i18n={`priorities.${id}_item${n}`}>{en[`item${n}`]}</span>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<style>
+  .tone-cream { background: var(--cream); }
+  .tone-lilac { background: var(--lilac); }
+  .tone-sand { background: var(--cream-dark); }
+  .grid { display: grid; gap: var(--space-2xl); align-items: start; }
+  .num {
+    display: block; font-family: var(--font-display); font-size: var(--text-5xl); font-weight: 900;
+    line-height: 1; color: var(--pink); margin-bottom: var(--space-sm);
+  }
+  .text p { color: var(--gray-700); margin-bottom: var(--space-md); }
+  .commit {
+    background: var(--white); border-radius: var(--radius-xl); padding: var(--space-xl);
+    box-shadow: var(--shadow-md); border-top: 6px solid var(--green);
+  }
+  .commit h3 { font-size: var(--text-xl); margin-bottom: var(--space-lg); }
+  ul { display: flex; flex-direction: column; gap: var(--space-md); }
+  li { display: flex; gap: var(--space-md); align-items: flex-start; color: var(--gray-700); }
+  .tick {
+    flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--green-light); color: var(--green);
+    font-weight: 800; font-size: 0.8rem; display: inline-flex; align-items: center; justify-content: center; margin-top: 2px;
+  }
+  @media (min-width: 900px) {
+    .grid { grid-template-columns: 1.1fr 1fr; gap: var(--space-3xl); }
+    .grid.flip .text { order: 2; }
+    .grid.flip .commit { order: 1; }
+    .commit { padding: var(--space-2xl); }
+  }
+</style>

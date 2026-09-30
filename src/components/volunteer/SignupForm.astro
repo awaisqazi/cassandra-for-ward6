@@ -1,0 +1,114 @@
+---
+const opts = [
+  { id: 'doors', key: 'opt_doors', label: 'Knocking on doors', val: 'Knock doors' },
+  { id: 'phone', key: 'opt_phone', label: 'Phone banking or texting', val: 'Phone bank / text' },
+  { id: 'meeting', key: 'opt_meeting', label: 'Hosting a house meeting', val: 'Host a house meeting' },
+  { id: 'sign', key: 'opt_sign', label: 'Putting up a yard sign', val: 'Yard sign' },
+  { id: 'petition', key: 'opt_petition', label: 'Signing or carrying the petition', val: 'Sign / carry the petition' },
+  { id: 'translate', key: 'opt_translate', label: 'Translating or Spanish outreach', val: 'Translate / Spanish outreach' },
+];
+---
+<section class="section-padding sf" id="signup">
+  <div class="container sf-wrap">
+    <header class="sf-head">
+      <span class="section-label animate-in" data-i18n="volunteer.form.label">Sign up</span>
+      <h2 class="section-title animate-in" data-i18n="volunteer.form.title">Join the team</h2>
+      <p class="lead animate-in" data-i18n="volunteer.form.intro">Tell us a little about yourself and how you would like to help. A real person will write back.</p>
+    </header>
+
+    <!-- TODO: replace mailto with Google Form / ActBlue form once created -->
+    <form class="sf-form card animate-in" id="signup-form" novalidate>
+      <div class="sf-field">
+        <label for="sf-name" data-i18n="volunteer.form.name_label">Full name</label>
+        <input id="sf-name" name="name" type="text" autocomplete="name" required placeholder="Your name" data-i18n="volunteer.form.name_ph" />
+      </div>
+      <div class="sf-field">
+        <label for="sf-email" data-i18n="volunteer.form.email_label">Email</label>
+        <input id="sf-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" data-i18n="volunteer.form.email_ph" />
+      </div>
+      <div class="sf-row">
+        <div class="sf-field">
+          <label for="sf-phone" data-i18n="volunteer.form.phone_label">Phone (optional)</label>
+          <input id="sf-phone" name="phone" type="tel" autocomplete="tel" placeholder="(630) 555-0123" data-i18n="volunteer.form.phone_ph" />
+        </div>
+        <div class="sf-field">
+          <label for="sf-zip" data-i18n="volunteer.form.zip_label">ZIP code</label>
+          <input id="sf-zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="10" placeholder="60505" data-i18n="volunteer.form.zip_ph" />
+        </div>
+      </div>
+      <fieldset class="sf-help">
+        <legend data-i18n="volunteer.form.help_legend">I can help by</legend>
+        <div class="sf-checks">
+          {opts.map((o) => (
+            <label class="sf-check">
+              <input type="checkbox" name="help" value={o.val} />
+              <span data-i18n={`volunteer.form.${o.key}`}>{o.label}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+      <p class="sf-error" id="sf-error" role="alert" hidden data-i18n="volunteer.form.error">Please add your name and email so we can reach you.</p>
+      <button type="submit" class="btn btn-pink btn-massive sf-submit" data-i18n="volunteer.form.submit">Send my sign-up</button>
+      <p class="sf-note" data-i18n="volunteer.form.note">This opens your email app with your details ready to send.</p>
+    </form>
+
+    <div class="sf-thanks card" id="sf-thanks" role="status" hidden>
+      <h3 data-i18n="volunteer.form.thanks_title">Thank you!</h3>
+      <p data-i18n="volunteer.form.thanks_text">Please check your email app. Your sign-up is ready, so just press send and we will be in touch soon.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('signup-form') as HTMLFormElement | null;
+  const thanks = document.getElementById('sf-thanks');
+  const err = document.getElementById('sf-error');
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const v = (n: string) => ((form.elements.namedItem(n) as HTMLInputElement | null)?.value || '').trim();
+    const name = v('name');
+    const email = v('email');
+    if (!name || !/^\S+@\S+\.\S+$/.test(email)) { if (err) err.hidden = false; return; }
+    if (err) err.hidden = true;
+    const helps = Array.from(form.querySelectorAll<HTMLInputElement>('input[name="help"]:checked')).map((c) => c.value);
+    const body = [
+      'New volunteer sign-up (Cassandra for Ward 6)',
+      '',
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Phone: ${v('phone') || '(none)'}`,
+      `ZIP: ${v('zip') || '(none)'}`,
+      `Can help with: ${helps.length ? helps.join(', ') : '(not specified)'}`,
+    ].join('\n');
+    const href = `mailto:auroraforcassandra@gmail.com?subject=${encodeURIComponent('Volunteer sign-up: ' + name)}&body=${encodeURIComponent(body)}`;
+    window.location.href = href;
+    form.hidden = true;
+    if (thanks) { thanks.hidden = false; thanks.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+  });
+</script>
+
+<style>
+  .sf { background: var(--lilac); }
+  .sf-wrap { max-width: 760px; }
+  .sf-head { margin-bottom: var(--space-xl); }
+  .sf-form { display: flex; flex-direction: column; gap: var(--space-lg); }
+  .sf-form:hover, .sf-thanks:hover { transform: none; }
+  .sf-row { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); }
+  .sf-field { display: flex; flex-direction: column; gap: 6px; }
+  .sf-field label, .sf-help legend { font-weight: 600; font-size: var(--text-sm); color: var(--purple-deep); }
+  .sf-field input { font: inherit; padding: 0.8rem 1rem; border: 2px solid var(--gray-300); border-radius: var(--radius-md); background: var(--white); color: var(--black); width: 100%; transition: border-color var(--duration-fast); }
+  .sf-field input:focus { outline: none; border-color: var(--purple); box-shadow: 0 0 0 3px rgba(120,40,136,0.15); }
+  .sf-help { border: none; padding: 0; }
+  .sf-help legend { margin-bottom: var(--space-sm); }
+  .sf-checks { display: grid; grid-template-columns: 1fr; gap: var(--space-sm); }
+  .sf-check { display: flex; align-items: center; gap: 10px; padding: 0.7rem 1rem; border: 2px solid var(--gray-300); border-radius: var(--radius-md); cursor: pointer; font-size: var(--text-sm); transition: border-color var(--duration-fast), background var(--duration-fast); }
+  .sf-check:hover, .sf-check:has(input:checked) { border-color: var(--green); background: var(--green-light); }
+  .sf-check input { width: 20px; height: 20px; accent-color: var(--green); flex: none; }
+  .sf-error { color: var(--pink-dark); font-weight: 600; font-size: var(--text-sm); }
+  .sf-error[hidden], .sf-thanks[hidden], .sf-form[hidden] { display: none; }
+  .sf-submit { width: 100%; }
+  .sf-note { text-align: center; font-size: var(--text-xs); color: var(--gray-500); }
+  .sf-thanks { text-align: center; background: var(--green-light); border-color: var(--green); }
+  .sf-thanks h3 { font-size: var(--text-3xl); color: var(--green); margin-bottom: var(--space-sm); }
+  @media (min-width: 640px) { .sf-row, .sf-checks { grid-template-columns: 1fr 1fr; } .sf-submit { width: auto; align-self: flex-start; } .sf-note { text-align: left; } }
+</style>

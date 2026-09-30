@@ -1,0 +1,41 @@
+---
+const dates = [
+  { k: 'd1', when: 'Oct 19 - 26, 2026', title: 'Petition filing', text: 'Candidates file their petitions with the Aurora City Clerk, 8am to 5pm.' },
+  { k: 'd2', when: 'Feb 23, 2027', title: 'Primary election day', text: 'The first vote, and the one that matters most. The primary narrows the field and decides who goes on to April.', key: true },
+  { k: 'd3', when: 'Apr 6, 2027', title: 'General election', text: 'The consolidated general election. Ward 6 makes its final choice.' },
+];
+---
+<section class="section-padding kd" id="dates">
+  <div class="container">
+    <span class="section-label animate-in" data-i18n="volunteer.dates.label">Key dates</span>
+    <h2 class="section-title animate-in" data-i18n="volunteer.dates.title">Mark your calendar</h2>
+    <div class="kd-grid">
+      {dates.map((d, i) => (
+        <article class={`card kd-card animate-in${d.key ? ' kd-key' : ''}`} style={`--reveal-delay:${i * 0.08}s`}>
+          <p class="kd-when stat-tabular" data-i18n={`volunteer.dates.${d.k}_when`}>{d.when}</p>
+          <h3 data-i18n={`volunteer.dates.${d.k}_title`}>{d.title}</h3>
+          <p class="kd-text" data-i18n={`volunteer.dates.${d.k}_text`}>{d.text}</p>
+        </article>
+      ))}
+    </div>
+    <p class="kd-count animate-in">
+      <span class="kd-days stat-tabular" data-days-until="2027-02-23">147</span>
+      <span data-i18n="volunteer.dates.count_label">days until the primary</span>
+    </p>
+  </div>
+</section>
+
+<style>
+  .kd { background: var(--cream); }
+  .kd-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); }
+  .kd-when { font-family: var(--font-display); font-weight: 700; font-size: var(--text-2xl); color: var(--pink-dark); margin-bottom: var(--space-xs); }
+  .kd-card h3 { font-size: var(--text-xl); color: var(--black); margin-bottom: var(--space-xs); }
+  .kd-text { color: var(--gray-700); font-size: var(--text-sm); }
+  .kd-key { background: var(--purple); border-color: var(--purple); }
+  .kd-key .kd-when { color: var(--pink); }
+  .kd-key h3 { color: var(--white); }
+  .kd-key .kd-text { color: rgba(255,255,255,0.85); }
+  .kd-count { display: inline-flex; align-items: baseline; gap: var(--space-sm); margin-top: var(--space-xl); background: var(--green-light); color: var(--green); font-weight: 700; padding: 0.5rem 1.25rem; border-radius: 999px; }
+  .kd-days { font-family: var(--font-display); font-size: var(--text-2xl); color: var(--purple-deep); }
+  @media (min-width: 800px) { .kd-grid { grid-template-columns: repeat(3, 1fr); } }
+</style>

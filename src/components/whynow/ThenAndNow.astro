@@ -1,0 +1,46 @@
+---
+const items = [
+  { year: '1985', k: 'i1', title: 'The seat is filled', text: 'In May 1985, the current alderman is appointed to represent Ward 6.' },
+  { year: '1988', k: 'i2', title: 'The Riverwalk Commission', text: 'The current alderman starts the Riverwalk Commission.' },
+  { year: '2008', k: 'i3', title: 'Phones and a recession', text: 'Smartphones become part of daily life, and the Great Recession reshapes family budgets across the country.' },
+  { year: '2020', k: 'i4', title: 'A pandemic', text: 'Schools, shops, and neighborhood gathering places close for a time, and neighbors lean on each other.' },
+  { year: '2026', k: 'i5', title: 'Ward 6 today', text: 'The challenges look different than they did in 1985. Ward 6 deserves someone ready to meet them with fresh eyes and new ideas.' },
+  { year: '2027', k: 'i6', title: 'Ward 6 chooses', text: 'The primary on February 23, 2027 is the first vote and narrows the field. The general election on April 6, 2027 decides who represents Ward 6 next.', last: true },
+];
+---
+<section class="section-padding tn">
+  <div class="container">
+    <header class="tn-head">
+      <span class="section-label animate-in" data-i18n="whynow.timeline.label">Then and now</span>
+      <h2 class="section-title animate-in" data-i18n="whynow.timeline.title">A lot can change in 41 years</h2>
+      <p class="lead animate-in" data-i18n="whynow.timeline.intro">Michael B. Saville has served Ward 6 since 1985, and we thank him for his service. The world around Ward 6 has changed a great deal since then. Here is a short look.</p>
+    </header>
+    <ol class="tl">
+      {items.map((it, i) => (
+        <li class={`tl-item animate-in${it.last ? ' tl-last' : ''}`} style={`--reveal-delay:${(i % 3) * 0.06}s`}>
+          <span class="tl-dot" aria-hidden="true"></span>
+          <span class="tl-year stat-tabular">{it.year}</span>
+          <div class="tl-body">
+            <h3 data-i18n={`whynow.timeline.${it.k}_title`}>{it.title}</h3>
+            <p data-i18n={`whynow.timeline.${it.k}_text`}>{it.text}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<style>
+  .tn { background: var(--cream); }
+  .tn-head { max-width: 680px; margin-bottom: var(--space-2xl); }
+  .tl { position: relative; padding-left: 34px; max-width: 760px; }
+  .tl::before { content: ''; position: absolute; left: 9px; top: 8px; bottom: 8px; width: 3px; background: linear-gradient(var(--green), var(--pink)); border-radius: 3px; opacity: 0.6; }
+  .tl-item { position: relative; padding-bottom: var(--space-2xl); }
+  .tl-item:last-child { padding-bottom: 0; }
+  .tl-dot { position: absolute; left: -34px; top: 8px; width: 21px; height: 21px; border-radius: 50%; background: var(--cream); border: 4px solid var(--green); }
+  .tl-last .tl-dot { border-color: var(--pink); background: var(--pink); box-shadow: 0 0 0 6px rgba(248,96,176,0.2); }
+  .tl-year { display: inline-block; font-family: var(--font-display); font-weight: 700; font-size: var(--text-3xl); color: var(--purple); line-height: 1; margin-bottom: var(--space-xs); }
+  .tl-body h3 { font-size: var(--text-xl); color: var(--black); margin-bottom: var(--space-xs); }
+  .tl-body p { color: var(--gray-700); max-width: 56ch; }
+  .tl-last .tl-year { color: var(--pink-dark); }
+</style>

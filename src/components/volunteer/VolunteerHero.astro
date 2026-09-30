@@ -1,0 +1,25 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<section class="vh">
+  <img src={`${base}/flower.png`} alt="" aria-hidden="true" class="vh-flower" />
+  <div class="container vh-inner">
+    <span class="section-label animate-in" data-i18n="volunteer.hero.label">Get involved</span>
+    <h1 class="vh-title animate-in" style="--reveal-delay:0.08s" data-i18n="volunteer.hero.title">Help build hope in Ward 6</h1>
+    <p class="vh-sub animate-in" style="--reveal-delay:0.16s" data-i18n="volunteer.hero.sub">This campaign is neighbors talking to neighbors. There is a place for you, whether you have one hour or ten.</p>
+    <div class="vh-btns animate-in" style="--reveal-delay:0.24s">
+      <a href="#signup" class="btn btn-pink btn-massive" data-i18n="volunteer.hero.cta">Join the team</a>
+      <a href="#dates" class="btn btn-outline" data-i18n="volunteer.hero.cta2">See key dates</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .vh { position: relative; overflow: hidden; padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-3xl); background: linear-gradient(160deg, var(--pink-light) 0%, var(--lilac) 100%); }
+  .vh-flower { position: absolute; right: -70px; top: calc(var(--nav-height) + 10px); width: 280px; opacity: 0.2; pointer-events: none; }
+  .vh-inner { position: relative; }
+  .vh-title { font-size: var(--text-5xl); max-width: 14ch; letter-spacing: -0.02em; margin-bottom: var(--space-lg); }
+  .vh-sub { font-size: var(--text-xl); color: var(--gray-700); max-width: 38ch; margin-bottom: var(--space-xl); }
+  .vh-btns { display: flex; flex-wrap: wrap; gap: var(--space-md); }
+  @media (min-width: 900px) { .vh-flower { width: 400px; right: 3%; } }
+</style>

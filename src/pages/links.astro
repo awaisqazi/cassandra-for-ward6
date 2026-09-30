@@ -1,0 +1,52 @@
+---
+// Linktree-style page for the Instagram / TikTok bio. English only by design (single mobile audience).
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const DONATE = 'https://secure.actblue.com/donate/cassandrabuildinghope';
+const links = [
+  { href: DONATE, label: 'Donate on ActBlue', sub: 'Powered by neighbors, not corporations', primary: true, external: true },
+  { href: `${base}/volunteer#signup`, label: 'Join the team', sub: 'Knock doors, host a house meeting, get a yard sign' },
+  { href: `${base}/priorities`, label: 'Her priorities', sub: 'Safety with accountability, dignity, investment' },
+  { href: `${base}/why-now`, label: 'Why now', sub: 'Ward 6 has had the same alderman since 1985' },
+  { href: `${base}/meet`, label: 'Meet Cassandra', sub: 'Who she is and why she is running' },
+  { href: 'mailto:auroraforcassandra@gmail.com', label: 'Email the campaign', sub: 'auroraforcassandra@gmail.com' },
+];
+---
+
+<Layout title="Links | Cassandra for Ward 6" description="Donate, volunteer, and learn more about Cassandra Echeverria for Ward 6 Alderperson in Aurora, Illinois. The primary is February 23, 2027." actionBar={false}>
+  <main id="main" class="links-page">
+    <div class="links-card">
+      <img src={`${base}/logo.png`} alt="Cassandra for Ward 6. Building Hope." class="links-logo" width="713" height="362" />
+      <p class="links-tag">People should come before power.</p>
+      <p class="links-date">Primary: <strong>February 23, 2027</strong> · General: April 6, 2027</p>
+      <ul class="links-list">
+        {links.map((l) => (
+          <li>
+            <a href={l.href} class={`link-btn ${l.primary ? 'link-primary' : ''}`} target={l.external ? '_blank' : undefined} rel={l.external ? 'noopener' : undefined}>
+              <span class="link-label">{l.label}</span>
+              <span class="link-sub">{l.sub}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <a href={`${base}/`} class="links-home">Full website →</a>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .links-page { min-height: 100svh; display: flex; align-items: center; justify-content: center; padding: var(--space-xl) var(--space-md); background: linear-gradient(180deg, var(--lilac), var(--cream) 60%, var(--pink-light)); }
+  .links-card { width: 100%; max-width: 440px; text-align: center; }
+  .links-logo { width: 260px; margin: 0 auto var(--space-md); }
+  .links-tag { font-family: var(--font-display); font-style: italic; color: var(--purple); font-size: var(--text-lg); }
+  .links-date { font-size: var(--text-sm); color: var(--gray-500); margin: var(--space-xs) 0 var(--space-xl); }
+  .links-date strong { color: var(--pink-dark); }
+  .links-list { display: flex; flex-direction: column; gap: var(--space-sm); }
+  .link-btn { display: flex; flex-direction: column; align-items: center; background: var(--white); border: 1.5px solid rgba(120,40,136,0.15); border-radius: 999px; padding: 14px 20px; transition: all var(--duration-fast); box-shadow: var(--shadow-sm); }
+  .link-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--purple); }
+  .link-label { font-weight: 700; color: var(--purple); }
+  .link-sub { font-size: 0.78rem; color: var(--gray-500); }
+  .link-primary { background: var(--pink); border-color: var(--pink); }
+  .link-primary .link-label, .link-primary .link-sub { color: var(--white); }
+  .links-home { display: inline-block; margin-top: var(--space-xl); font-weight: 600; color: var(--purple); font-size: var(--text-sm); }
+</style>

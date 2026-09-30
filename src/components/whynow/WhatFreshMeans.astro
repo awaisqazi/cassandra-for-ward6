@@ -1,0 +1,46 @@
+---
+const cards = [
+  { k: 'c1', old: 'One familiar point of view at the table.', title: 'Listening', text: "Cassandra will make listening the first job, with open neighborhood meetings and real answers to residents' questions." },
+  { k: 'c2', old: 'The same approach, year after year.', title: 'New ideas', text: 'Cassandra brings practical, community-centered ideas for safer streets, dignity for unhoused neighbors, and investment in our youth.' },
+  { k: 'c3', old: 'A career, not a term.', title: 'Energy', text: 'Cassandra will knock on doors, show up at neighborhood events, and be present in every corner of Ward 6.' },
+  { k: 'c4', old: 'The same seat, election after election.', title: 'Accountability', text: 'Cassandra will report back regularly on what she is doing and why, and measure success by results for neighbors.' },
+];
+---
+<section class="section-padding wf">
+  <div class="container">
+    <header class="wf-head">
+      <span class="section-label animate-in" data-i18n="whynow.fresh.label">What fresh means</span>
+      <h2 class="section-title animate-in" data-i18n="whynow.fresh.title">New representation, in practice</h2>
+      <p class="lead animate-in" data-i18n="whynow.fresh.intro">Less about the past. More about what Cassandra will do.</p>
+    </header>
+    <div class="wf-grid">
+      {cards.map((c, i) => (
+        <article class="card wf-card animate-in" style={`--reveal-delay:${i * 0.08}s`}>
+          <h3 class="wf-title" data-i18n={`whynow.fresh.${c.k}_title`}>{c.title}</h3>
+          <div class="wf-row wf-old">
+            <span class="wf-tag" data-i18n="whynow.fresh.old_label">The same approach for 41 years</span>
+            <p data-i18n={`whynow.fresh.${c.k}_old`}>{c.old}</p>
+          </div>
+          <div class="wf-row wf-new">
+            <span class="wf-tag" data-i18n="whynow.fresh.new_label">What new representation brings</span>
+            <p data-i18n={`whynow.fresh.${c.k}_new`}>{c.text}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .wf { background: var(--cream-dark); }
+  .wf-head { max-width: 640px; margin-bottom: var(--space-2xl); }
+  .wf-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); }
+  .wf-card { display: flex; flex-direction: column; gap: var(--space-md); }
+  .wf-title { font-size: var(--text-2xl); }
+  .wf-tag { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 4px; }
+  .wf-old { color: var(--gray-500); padding-bottom: var(--space-md); border-bottom: 1px dashed var(--gray-300); }
+  .wf-old .wf-tag { color: var(--gray-500); }
+  .wf-new .wf-tag { color: var(--green); }
+  .wf-new p { color: var(--black); font-weight: 500; }
+  @media (min-width: 720px) { .wf-grid { grid-template-columns: 1fr 1fr; } }
+</style>

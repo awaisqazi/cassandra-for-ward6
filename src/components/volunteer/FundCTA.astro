@@ -1,0 +1,18 @@
+---
+const DONATE = 'https://secure.actblue.com/donate/cassandrabuildinghope';
+---
+<section class="fc on-dark">
+  <div class="container fc-inner">
+    <span class="section-label animate-in" data-i18n="volunteer.fund.label">Powered by neighbors</span>
+    <h2 class="section-title animate-in" data-i18n="volunteer.fund.title">Chip in to build hope</h2>
+    <p class="fc-text animate-in" data-i18n="volunteer.fund.text">This campaign is powered by everyday people, like yourself, and NOT corporations.</p>
+    <a href={DONATE} class="btn btn-pink btn-massive animate-in" target="_blank" rel="noopener" data-i18n="volunteer.fund.btn">Donate</a>
+  </div>
+</section>
+
+<style>
+  .fc { background: var(--purple-deep); padding: var(--space-4xl) 0; text-align: center; }
+  .fc-inner { max-width: 720px; }
+  .fc-text { font-family: var(--font-display); font-style: italic; font-size: var(--text-2xl); color: var(--white); margin-bottom: var(--space-xl); }
+  @media (max-width: 768px) { .fc { padding: var(--space-3xl) 0; } }
+</style>

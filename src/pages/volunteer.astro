@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import VolunteerHero from '../components/volunteer/VolunteerHero.astro';
+import KeyDates from '../components/volunteer/KeyDates.astro';
+import PetitionDrive from '../components/volunteer/PetitionDrive.astro';
+import ActionCards from '../components/volunteer/ActionCards.astro';
+import SignupForm from '../components/volunteer/SignupForm.astro';
+import FundCTA from '../components/volunteer/FundCTA.astro';
+---
+<Layout
+  title="Volunteer | Cassandra for Ward 6"
+  description="Help build hope in Ward 6. Knock doors, make calls, host a house meeting, or sign the petition. The primary is February 23, 2027."
+>
+  <Navbar />
+  <main id="main">
+    <VolunteerHero />
+    <KeyDates />
+    <PetitionDrive />
+    <ActionCards />
+    <SignupForm />
+    <FundCTA />
+  </main>
+  <Footer />
+</Layout>

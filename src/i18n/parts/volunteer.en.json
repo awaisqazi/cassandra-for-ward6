@@ -1,0 +1,88 @@
+{
+  "volunteer": {
+    "hero": {
+      "label": "Get involved",
+      "title": "Help build hope in Ward 6",
+      "sub": "This campaign is neighbors talking to neighbors. There is a place for you, whether you have one hour or ten.",
+      "cta": "Join the team",
+      "cta2": "See key dates"
+    },
+    "dates": {
+      "label": "Key dates",
+      "title": "Mark your calendar",
+      "d1_when": "Oct 19 - 26, 2026",
+      "d1_title": "Petition filing",
+      "d1_text": "Candidates file their petitions with the Aurora City Clerk, 8am to 5pm.",
+      "d2_when": "Feb 23, 2027",
+      "d2_title": "Primary election day",
+      "d2_text": "The first vote, and the one that matters most. The primary narrows the field and decides who goes on to April.",
+      "d3_when": "Apr 6, 2027",
+      "d3_title": "General election",
+      "d3_text": "The consolidated general election. Ward 6 makes its final choice.",
+      "count_label": "days until the primary"
+    },
+    "petition": {
+      "label": "The petition drive",
+      "title": "Getting on the ballot starts with neighbors",
+      "p1": "To get on the ballot, Cassandra needs signatures from registered Ward 6 voters. We gather them now and file them with the City Clerk during the filing window, October 19 to 26, 2026.",
+      "p2": "Signing takes a minute. Carrying a clipboard takes a few hours, and it is one of the best ways to meet your neighbors.",
+      "s1_title": "Sign the petition",
+      "s1_text": "If you are a registered Ward 6 voter, add your name.",
+      "s2_title": "Carry a petition",
+      "s2_text": "Collect signatures on your block, at a gathering, or at your door.",
+      "s3_title": "Tell a neighbor",
+      "s3_text": "Share the campaign with one friend in Ward 6 this week.",
+      "note1": "[TO CONFIRM] Exact number of signatures required",
+      "note2": "[TO CONFIRM] Petition drive schedule and locations"
+    },
+    "form": {
+      "label": "Sign up",
+      "title": "Join the team",
+      "intro": "Tell us a little about yourself and how you would like to help. A real person will write back.",
+      "name_label": "Full name",
+      "name_ph": "Your name",
+      "email_label": "Email",
+      "email_ph": "you@example.com",
+      "phone_label": "Phone (optional)",
+      "phone_ph": "(630) 555-0123",
+      "zip_label": "ZIP code",
+      "zip_ph": "60505",
+      "help_legend": "I can help by",
+      "opt_doors": "Knocking on doors",
+      "opt_phone": "Phone banking or texting",
+      "opt_meeting": "Hosting a house meeting",
+      "opt_sign": "Putting up a yard sign",
+      "opt_petition": "Signing or carrying the petition",
+      "opt_translate": "Translating or Spanish outreach",
+      "submit": "Send my sign-up",
+      "note": "This opens your email app with your details ready to send.",
+      "error": "Please add your name and email so we can reach you.",
+      "thanks_title": "Thank you!",
+      "thanks_text": "Please check your email app. Your sign-up is ready, so just press send and we will be in touch soon."
+    },
+    "actions": {
+      "label": "Ways to help",
+      "title": "Six ways to build hope",
+      "a1_title": "Knock doors",
+      "a1_text": "Talk with neighbors on their porches. It is the heart of this campaign.",
+      "a2_title": "Phone and text",
+      "a2_text": "Reach Ward 6 voters from your couch, on your own time.",
+      "a3_title": "Host a house meeting",
+      "a3_text": "Invite friends and neighbors over. Cassandra will come and listen.",
+      "a4_title": "Take a yard sign",
+      "a4_text": "Show your block that Ward 6 has a choice.",
+      "a5_title": "Translate",
+      "a5_text": "Help us reach Spanish-speaking neighbors in their own language.",
+      "a6_title": "Donate",
+      "a6_text": "Every gift helps us reach more Ward 6 residents.",
+      "btn": "Sign me up",
+      "btn_donate": "Donate"
+    },
+    "fund": {
+      "label": "Powered by neighbors",
+      "title": "Chip in to build hope",
+      "text": "This campaign is powered by everyday people, like yourself, and NOT corporations.",
+      "btn": "Donate"
+    }
+  }
+}
